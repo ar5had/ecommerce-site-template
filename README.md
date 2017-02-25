@@ -8,3 +8,5 @@ A beautiful e-commerce template with a flat design.
 *  `yarn start`
 
 Open `localhost:8080` to open the app!
+
+Demo - https://ecommerce-template-wghicapzod.now.sh
