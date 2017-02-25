@@ -1,0 +1,113 @@
+@import '../../styles/variables.sass'
+
+.addItemWrapper
+  .hider
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: $hider-background
+    z-index: 999
+  .modal
+    overflow: hidden
+    background: $modal-background
+    max-width: 1200px
+    height: 85vh
+    width: 90vw
+    position: fixed
+    top: 50%
+    left: 50%
+    border: solid 1px $modal-border-color
+    box-shadow: 0 4px 29px rgba(0,0,0,.22), 0 0 0 1px rgba(0,0,0,.04)
+    transform: translate(-50%, -50%)
+    z-index: 99999
+    box-sizing: border-box
+
+    .heading
+      top: 0
+      left: 0
+      position: fixed
+      width: 100%
+      z-index: 999
+
+    h3
+      font-size: 1.3rem
+      padding-bottom: .5rem
+      border-bottom: solid 2px transparent
+      text-align: center
+      padding: .7rem 1.5rem
+      border-bottom: solid 2px $modal-border-color
+      width: 100%
+
+    .priceWrapper
+      display: flex
+      .inputWrapper
+        flex: 1
+        .input
+          width: 100%
+        &:first-child
+          margin-right: 1rem
+        &:last-child
+          margin-left: 1rem
+
+    .itemWrapper
+      display: flex
+      flex-direction: column
+      overflow-y: auto
+      height: calc(85vh - 137px)
+      margin-top: 50px
+      overflow-y: auto
+      padding: 2.5rem 1.5rem 0 1.5rem
+      .itemPicWrapper
+        flex: 1
+        .img
+          margin: auto
+          background: #eee
+          height: 9rem
+          width: 9rem
+          border-radius: 50%
+        .imgText
+          color: $black
+          font-weight: 500
+          font-size: .9rem
+          text-align: center
+          margin: 2rem 0
+          line-height: 1.5
+          padding: 0 10px
+          position: relative
+      .itemInfoWrapper
+        flex: 3
+        margin-top: 2rem
+        .inputWrapper
+      .itemDescription, .itemTags
+        padding: .5rem 1rem
+        resize: none
+        height: 8rem
+        box-sizing: border-box
+        width: 100% !important
+      .itemTags
+        margin-bottom: 2.5rem
+    .buttonWrapper
+      display: flex
+      z-index: 999
+      button
+        flex: 1
+        height: 50px
+        padding: 0
+        margin: 0
+        font-size: .9rem
+        color: $light-grey
+        font-weight: 700
+        text-transform: uppercase
+        background: none
+        transition: color .3s
+        cursor: pointer
+        border-top: solid 2px $modal-border-color
+        &:last-child
+         border-left: solid 2px $modal-border-color
+        &:hover
+          color: $black
+          cursor: pointer
+        &:active
+          color: $black

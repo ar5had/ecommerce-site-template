@@ -1,0 +1,138 @@
+@import './variables.sass'
+
+@media screen and (max-width: 400px)
+  .lIWrapper, .cIWrapper
+    & > *
+      flex-basis: 100%
+      flex: 0 1 calc(50% -2rem)
+  h3.error
+    font-size: 2rem
+  .priceWrapper
+    flex-direction: column
+    .inputWrapper
+      flex: 1
+      .input
+        width: 100%
+      &:first-child
+        margin-right: 0 !important
+      &:last-child
+        margin-left: 0 !important
+
+@media screen and (min-width: 768px)
+  button.normalBtn
+    padding: .5rem 1rem !important
+  .wrapper
+    max-width: 1200px
+    margin: 10px auto
+    padding: 75px !important
+  .footer
+    margin: 90px 0 0 0
+    padding: 0
+  .header
+    margin: 0px 0 20px 0
+    display: flex
+    flex-direction: row
+  .header > h1
+    flex: 1
+    text-align: left
+  .logo
+    font-size: 2.5rem !important
+  .menu
+    flex: none
+    height: auto
+    display: flex
+    width: auto
+  .navLink
+    margin-left: 20px
+    font-size: .9rem
+    &:last-child
+      border: none
+      padding: 0
+  .item
+    --width: calc(100vw - 150px)
+    --totalMargin: calc(var(--width) * .07)
+    margin-bottom: calc(var(--totalMargin) / 2)
+    width
+    flex: 0 1 31%
+
+  .otherInfo
+    margin: 0 2rem
+
+  .basicInfo
+    padding: 0 1.5rem
+
+  .profilePic
+    width: 150px
+    height: 150px
+
+  .infoWrapper
+    flex-direction: row
+
+  h3.error
+    margin: 25vh 0
+
+  .tradesInfoWrapper
+    flex-direction: row
+    justify-content: space-between
+    .tradeReqWrapper, .tradeProposedWrapper
+      flex: 0 1 calc(50% - 1rem)
+
+  .trWrapper, .ptWrapper, .uIWrapper
+    .userImg
+      margin-top: .2rem
+      flex: 0 0 4rem
+      height: 4rem
+      width: 4rem
+    .lower
+      display: flex
+    h4
+      font-size: 1rem
+    a
+      font-size: 1rem
+  .tradeProposedWrapper
+    margin-top: 0
+
+  .itemPageWrapper
+    flex-direction: row
+    .itemInfoWrapper
+      margin-left: 2rem
+      margin-top: 0
+    .reqTradeBtn
+      margin: 3rem 0 2rem 0
+      border: solid 2px $black
+  .uIWrapper
+    margin: 0 0 4rem 0
+    .upper
+      flex-direction: row
+    .itemCost
+      color: lighten($black, 20%)
+      font-size: 1.2rem
+      margin: 1rem 0
+      font-weight: 500
+    .addDate
+      margin: .5rem 0
+      font-weight: 500
+    .itemDescription
+      margin: 2rem 0
+    .itemInfo
+      margin-left: 3rem
+    .userImg
+      margin-top: .2rem
+      flex: 0 0 10rem
+      height: 10rem
+      width: 10rem
+  .myItemsWrapper
+    padding: 0 0 2rem 0
+
+  .addItemWrapper
+    .itemWrapper
+      display: flex
+      flex-direction: row !important
+      .itemPicWrapper
+        .img
+          height: 12rem !important
+          width: 12rem !important
+    .itemInfoWrapper
+      margin-left: 2rem
+      margin-top: 0 !important
+

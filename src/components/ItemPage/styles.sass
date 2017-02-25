@@ -1,0 +1,59 @@
+@import '../../styles/variables.sass'
+
+.itemPageWrapper
+  padding: 1rem 0 2rem 0
+  display: flex
+  flex-direction: column
+  .itemImgWrapper
+    background: #eee
+    flex: 1
+    min-height: 50vh
+  .itemInfoWrapper
+    margin-top: 2rem
+    flex: 1
+  .itemName
+    margin: 1rem 0 .5rem 0
+  .seller
+    margin-top: 1.5rem
+    font-size: 1rem
+    letter-spacing: 1px
+    color: $grey
+    span
+      font-weight: 800
+      color: $black
+  .itemCost
+    color: lighten($black, 20%)
+    font-size: 1.5rem
+    margin: 1rem 0
+    font-weight: 500
+
+  .backLink
+    font-size: .9rem
+    color: $grey
+    cursor: pointer
+    transition: color .2s
+    font-weight: 500
+    span.small
+      svg
+        transform: rotateZ(90deg)
+        transition: color .2s
+        fill: $grey
+        font-weight: 800
+    &:hover, &:active
+      color: $black
+      span svg
+        fill: $black
+
+  button
+    font-size: .8rem
+    font-weight: 600
+    text-transform: uppercase
+    padding: .5rem 1rem
+    cursor: pointer
+    transition: opacity .3s
+    &:hover
+      opacity: .8
+  .reqTradeBtn
+    margin: 3rem 0 0 0
+    background: $black
+    color: #fff

@@ -1,0 +1,68 @@
+@import '../../styles/variables.sass'
+
+.uIWrapper
+  margin: 0 0 3rem 0
+  .itemCost
+    color: lighten($black, 20%)
+    font-size: 1.2rem
+    margin: .7rem 0
+    font-weight: 500
+  .addDate
+    margin: .5rem 0
+    font-weight: 500
+    color: $grey
+    letter-spacing: 1px
+  .itemDescription
+    margin: .5rem 0 1.5rem 0
+  .upper
+    margin: 0 0 1rem 0
+    display: flex
+    flex-direction: column
+  .userImg
+    flex: 0 0 10rem
+    height: 10rem
+    width: 10rem
+    background: #eee
+    border-radius: 50%
+    margin: 1.5rem auto
+  .lower
+    display: flex
+  h3.itemName
+    line-height: 1.2
+    font-size: 1.2rem
+    letter-spacing: 2px
+    a
+      transition: none
+      color: inherit
+      font-size: inherit
+      border-bottom: solid 2px transparent
+      &:hover
+        border-bottom: solid 2px
+  a
+    font-size: .9rem
+    font-weight: 500
+    color: $grey
+    cursor: pointer
+    transition: all .3s
+    &:hover
+      color: $black
+      cursor: pointer
+  button
+    font-size: .8rem
+    font-weight: 600
+    text-transform: uppercase
+    padding: .2rem 1rem
+    cursor: pointer
+    transition: opacity .3s
+    &:hover
+      opacity: .8
+  .deleteBtn
+    background: $black
+    color: #fff
+  .editBtn
+    margin-left: 1rem
+    background: none
+    border: solid 2px
+    &:hover
+      opacity: .7
+

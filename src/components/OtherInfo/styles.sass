@@ -1,0 +1,51 @@
+@import '../../styles/variables.sass'
+
+.otherInfo
+  flex: 3
+
+.lIWrapper, .cIWrapper
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+
+  & > *
+    flex: 0 1 calc(50% - 1rem)
+
+.contactInfo
+  margin-top: 2rem
+  padding-bottom: 1rem
+
+.heading
+  display: flex
+  h3
+    flex: 1
+  button
+    padding: 0 !important
+    background: transparent
+    color: $light-grey
+    border: none
+    line-height: 1
+    font-weight: 500
+    font-size: .9rem
+    text-transform: uppercase
+    transition: color .3s
+    cursor: pointer
+    &:hover
+      color: $black
+
+.inputWrapper
+  display: flex
+  flex-direction: column
+  margin-bottom: 1rem
+
+p.inputData
+  padding: .5rem 1rem
+  color: $grey
+  margin: 1rem 0
+  font-size: .9rem
+  font-weight: 400
+  border-bottom: solid 2px transparent
+  background: #fff
+
+.cancelBtn
+  margin-left: 1rem

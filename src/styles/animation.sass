@@ -1,0 +1,16 @@
+.content-enter
+  opacity: 0.01
+  transform: scale(.96)
+
+.content-enter.content-enter-active
+  opacity: 1
+  transform: scale(1)
+  transition: transform .4s cubic-bezier(.82,0,.12,1),opacity .4s cubic-bezier(.82,0,.12,1), transform .4s cubic-bezier(.82,0,.12,1)
+
+.content-leave
+  opacity: 0
+  transform: scale(.96)
+
+.content-leave.content-leave-active
+  transform: scale(.96)
+  opacity: 0.01

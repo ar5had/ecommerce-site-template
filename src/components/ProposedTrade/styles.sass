@@ -1,0 +1,47 @@
+@import '../../styles/variables.sass'
+
+.ptWrapper
+  &:first-child
+    margin-top: 0
+  margin-top: 2.5rem
+  .upper
+    margin: 1rem 0
+    display: flex
+  .userImg
+    margin-top: .2rem
+    flex: 0 0 3rem
+    height: 3rem
+    width: 3rem
+    background: #eee
+    border-radius: 50%
+    margin-right: 1rem
+  .lower
+    display: flex
+  h4
+    line-height: 1.2
+    font-size: .9rem
+    letter-spacing: 1px
+  a
+    font-size: .9rem
+    font-weight: 500
+    color: $grey
+    transition: all .3s
+    &:hover
+      color: $black
+      cursor: pointer
+  button
+    font-size: .8rem
+    font-weight: 600
+    text-transform: uppercase
+    padding: .2rem 1rem
+    cursor: pointer
+    transition: opacity .3s
+    &:hover
+      opacity: .8
+  .cancelBtn
+    margin: 0
+    background: none
+    border: solid 2px
+    &:hover
+      opacity: .7
+
