@@ -9,4 +9,4 @@ A beautiful e-commerce template with flat design.
 
 Open `localhost:8080` to open the app!
 
-Demo - https://ecommerce-template-wghicapzod.now.sh
+Demo - https://ecommerce-template-puisngxzxj.now.sh/
