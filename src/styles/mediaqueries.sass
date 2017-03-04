@@ -49,11 +49,15 @@
       border: none
       padding: 0
   .item
-    --width: calc(100vw - 150px)
-    --totalMargin: calc(var(--width) * .07)
-    margin-bottom: calc(var(--totalMargin) / 2)
-    width
+    padding-bottom: 3.5%
     flex: 0 1 31%
+    // to override the default css properties
+    &:nth-child(2n)
+      padding-right: 0
+      padding-left: 0
+    &:nth-child(3n - 1)
+      padding-right: 3.5%
+      padding-left: 3.5%
 
   .otherInfo
     margin: 0 2rem

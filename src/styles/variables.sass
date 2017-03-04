@@ -1,5 +1,5 @@
 $background-color: #fcfcfc
-$modal-background: #fcfcfc
+$modal-background: #fafafa
 $modal-border-color: #f2f2f2
 $hider-background: #fcfcfc
 $black: #222
@@ -8,3 +8,22 @@ $grey: rgba(34, 34, 34, .55)
 $fbColor: rgba(59, 89, 152, 0.9)
 $twitterColor: rgba(85, 172, 238, 0.9)
 $googleColor: rgba(221, 75, 57, 0.9)
+
+=hider-gradient
+  background: #f2f2f2
+  background: -webkit-gradient(radial,50% 25%,0,50% 25%,800,from(rgba(252, 252, 252,.9)),to(#f2f2f2)) transparent
+  background: -moz-radial-gradient(center 45deg,circle cover,rgba(252, 252, 252,.9) 0%,#f2f2f2 100%) transparent
+
+@function strip-units($number)
+  @return $number / ($number * 0 + 1)
+
+@function get-vw($target) 
+  $vw-context: (1000*.01) * 1px
+  @return ($target/$vw-context) * 1vw
+
+@function getMaxWidth($a, $b)
+  @warn "a= #{strip-units($a)}, b= #{strip-units($b)}"
+  @if $a > $b
+    @return $b+px
+  @else
+    @return $a+px

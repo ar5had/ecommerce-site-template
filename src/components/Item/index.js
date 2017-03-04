@@ -7,10 +7,11 @@ import './styles.sass';
 class Item extends Component {
   render() {
     return(
-      <div className="item" onClick={()=>{
+      <div className="item">
+        <div className="content" onClick={()=>{
           browserHistory.push('/item/123');
-        }}/>
-
+        }} />
+      </div>
     );
   }
 }

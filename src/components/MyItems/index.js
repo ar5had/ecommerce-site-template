@@ -17,22 +17,25 @@ class MyItems extends Component {
     document.querySelector('.menu').classList.remove('open');
   }
 
-
   closeModal() {
-    document.body.style.overflow = 'auto';
     this.setState({ modalOpened: false });
+    document.body.classList.remove('modal-opened');
+    document.body.style.marginRight = 0;
   }
 
   getModal() {
     if (this.state.modalOpened) {
-      return <AddItemPage close={this.closeModal.bind(this)} />;
+      return <AddItemPage openClass="open" close={this.closeModal.bind(this)} />;
     } else {
       return;
     }
   }
 
   openModal() {
-    document.body.style.overflow = 'hidden';
+    const scrollBar = document.querySelector('.scrollbar-measure');
+    const scrollBarWidth = scrollBar.offsetWidth - scrollBar.clientWidth;
+    document.body.classList.add('modal-opened');
+    document.body.style.marginRight = `${scrollBarWidth}px`;
     this.setState({ modalOpened: true });
   }
 

@@ -1,8 +1,15 @@
+@import '../../styles/variables.sass'
+
 .item
-  background: #eee
-  --width: calc(100vw - 40px)
-  --totalMargin: calc(var(--width) * .07)
-  margin-bottom: calc(var(--totalMargin) / 2)
+  padding-bottom: 4%
   height: 250px
   flex: 0 1 48%
+  align-items: stretch
+  &:nth-child(2n)
+    padding-left: 4%
+    padding-right: 0
 
+.content
+  height: 100%
+  background: #eee
+  cursor: pointer

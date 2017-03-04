@@ -6,9 +6,23 @@ class AddItemPage extends Component {
   constructor(props) {
     super(props);
   }
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.modalWrapper.classList.add(this.props.openClass);
+    }, 50);
+  }
+
+  close() {
+    this.modalWrapper.classList.remove(this.props.openClass);
+    setTimeout(() => {
+      this.props.close();
+    }, 850);
+  }
+
   render() {
     return (
-      <div className="addItemWrapper">
+      <div className="addItemWrapper" ref={node => { this.modalWrapper = node; }}>
         <div className="hider" />
         <div className="modal">
           <div className="heading">
@@ -45,8 +59,8 @@ class AddItemPage extends Component {
             </div>
           </div>
           <div className="buttonWrapper">
-            <button className="saveItemBtn" onClick={this.props.close}>Save</button>
-            <button className="cancelItemBtn" onClick={this.props.close}>Cancel</button>
+            <button className="saveItemBtn" onClick={this.close.bind(this)}>Save</button>
+            <button className="cancelItemBtn" onClick={this.close.bind(this)}>Cancel</button>
           </div>
         </div>
       </div>
@@ -56,6 +70,7 @@ class AddItemPage extends Component {
 
 AddItemPage.propTypes = {
   close: PropTypes.func,
+  openClass: PropTypes.string
 };
 
 export default AddItemPage;
