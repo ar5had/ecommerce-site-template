@@ -79,7 +79,7 @@
     "jest": "18.1.0",
     "json-loader": "0.5.4",
     "mockdate": "2.0.1",
-    "node-sass": "4.0.0",
+    "node-sass": "7.0.0",
     "npm-run-all": "3.1.2",
     "open": "0.0.5",
     "postcss-loader": "1.2.1",
